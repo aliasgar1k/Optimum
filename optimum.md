@@ -21,7 +21,7 @@ Nmap done: 1 IP address (1 host up) scanned in 15.18 seconds
 
 ### Port 80
 
-![](Assets/1.png)
+![](1.png)
 
 - The bottom of the page gives the exact version of HFS running, 2.3.
 
@@ -331,7 +331,7 @@ False
 
 That is because the<mark style="background: #9fef00;"> HFS process is likely running as a 32-bit process</mark>. This table (stolen from [ss64.com](https://ss64.com/nt/syntax-64bit.html)) shows how the different paths work based on the current session architecture:
 
-![](Assets/2.png)
+![](2.png)
 
 So from within a 32-bit session, calling PowerShell from the `C:\windows\system32` path will give the 32-bit version. <mark style="background: #9fef00;">Being in a 32-bit session trying to run kernel exploits against a 64-bit OS will fail.</mark>
 
